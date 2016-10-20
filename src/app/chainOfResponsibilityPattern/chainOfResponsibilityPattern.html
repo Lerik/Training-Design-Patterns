@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Chain Of Responsibility Pattern Example</h2>
+        </p>
+
+        <p class="explanation">Everytime you input a number and then press the button "Calculate", we'll evaluate if the number you just wrote is multiple of two, three or five. If one or more of those cases succeeded, then we'll increase the counter of the multiples that passed the evaluation.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="multiple-form">
+        <p>Select a Country</p>
+
+        <select ng-model="$ctrl.countrySelected">
+            <option ng-repeat="country in $ctrl.randomCountries" value="{{$index}}">{{country.name}}</option>
+        </select>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.handleCountry()">Evaluate</button>
+        </div>
+    </div>
+
+    <div class="counters">
+        <p>
+            Counter for Each Continent
+        </p>
+
+        <div class="continents">
+            <div class="observer-container">
+                <h3>Europe</h3>
+
+                <p>{{$ctrl.continents[0].getListOfCountries()}}</p>
+            </div>
+            <div class="observer-container">
+                <h3>Asia</h3>
+
+                <p>{{$ctrl.continents[1].getListOfCountries()}}</p>
+            </div>
+            <div class="observer-container">
+                <h3>Africa</h3>
+
+                <p>{{$ctrl.continents[2].getListOfCountries()}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Interpret Pattern Example</h2>
+        </p>
+
+        <p class="explanation">I decided to demostrate the interpret pattern by evaluating conditional statements.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="multiple-form">
+        <input type="number" ng-model="$ctrl.leftNumber" />
+
+        <select ng-model="$ctrl.option">
+            <option ng-repeat="condition in $ctrl.conditions" value="{{condition}}">{{condition}}</option>
+        </select>
+
+        <input type="number" ng-model="$ctrl.rightNumber" />
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.evaluateExpression()">Evaluate</button>
+            <button class="calculate-button" ng-click="$ctrl.clear()">Clear</button>
+        </div>
+    </div>
+
+    <div class="counters">
+        <h2>
+            RESULTS
+        </h2>
+
+        <h3>{{$ctrl.result}}</h3>
+    </div>
+</div>

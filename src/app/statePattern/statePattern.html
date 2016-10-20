@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>State Pattern Example</h2>
+        </p>
+
+        <p class="explanation">In this example we simulate the iFeel feature most air conditioners have nowadays. When the room temperature reaches to 70 Fahrenheit degrees, the air conditioner will be turned on. On the other hand, when room temperature declines to 60 Fahrenheit degrees, the air conditioner will be turned off.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="air-conditioner-information">
+        <p>Air Conditioner is</p>
+
+        <p>
+            <h3>{{$ctrl.getStatus()}}</h3>
+        </p>
+
+        <img src="{{$ctrl.imagePath}}">
+
+        <p>
+            <span class="round label">Current Temperature of the Room</span>
+        </p>
+
+        <p>
+            <h3>{{$ctrl.getTemperature()}}</h3>
+        </p>
+    </div>
+</div>

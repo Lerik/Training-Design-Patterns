@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Observer Pattern Example</h2>
+        </p>
+
+        <p class="explanation">Everytime you input a number and then press the button "Calculate", we'll evaluate if the number you just wrote is multiple of two, three or five. If one or more of those cases succeeded, then we'll increase the counter of the multiples that passed the evaluation.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="multiple-form">
+        <p>Write a number</p>
+
+        <input type="number" ng-model="$ctrl.numberToCalculate"/>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.calculate()">Calculate</button>
+        </div>
+    </div>
+
+    <div class="counters">
+        <p>
+            Counter for Each Multiple
+        </p>
+
+        <div class="observers">
+            <div class="observer-container">
+                <p>Multiple Of 2</p>
+
+                <h3>{{$ctrl.observerOfTwo.getCounter()}}</h3>
+            </div>
+            <div class="observer-container">
+                <p>Multiple Of 3</p>
+
+                <h3>{{$ctrl.observerOfThree.getCounter()}}</h3>
+            </div>
+            <div class="observer-container">
+                <p>Multiple Of 5</p>
+
+                <h3>{{$ctrl.observerOfFive.getCounter()}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

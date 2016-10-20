@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Bridge and Null Object Pattern Example</h2>
+        </p>
+
+        <p class="explanation">In this example each type of vehicle represents concrete classes implementing an interface called IBuildMercedesBenz, which works as the bridge with the interface implementer IMercedesBenz. Unfortunately, the SUV car is not available in our database, so we use the Null Object Pattern to manage that car.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="air-conditioner-information">
+       <p>
+            <h4>Luxury Car</h4>
+        </p>
+
+        <img src="{{$ctrl.luxuryCar.getCarInformation()[0]}}">
+
+        <p>{{$ctrl.luxuryCar.getCarInformation()[1]}}
+        </p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="air-conditioner-information">
+        <p>
+            <h4>Sport Car</h4>
+        </p>
+
+        <img src="{{$ctrl.sportCar.getCarInformation()[0]}}">
+
+        <p>{{$ctrl.sportCar.getCarInformation()[1]}}
+        </p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="air-conditioner-information">
+        <p>
+            <h4>SUV Car</h4>
+        </p>
+
+        <img src="{{$ctrl.suvCar.getCarInformation()[0]}}">
+
+        <p>{{$ctrl.suvCar.getCarInformation()[1]}}
+        </p>
+    </div>
+</div>
